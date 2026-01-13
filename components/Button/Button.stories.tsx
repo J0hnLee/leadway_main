@@ -1,4 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
+import type { ComponentProps } from "react"
+
 import { Button } from "./Button"
 
 const meta: Meta<typeof Button> = {
@@ -25,7 +27,7 @@ const meta: Meta<typeof Button> = {
 type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
-  render: (args) => <Button {...args} />,
+  render: (args: ComponentProps<typeof Button>) => <Button {...args} />,
 }
 
 export default meta
